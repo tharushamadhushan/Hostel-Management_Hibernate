@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="720.0" prefWidth="1000.0" style="-fx-background-color: ;" styleClass="backgroundColor" stylesheets="@../style/dashboardsidebox.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+   <children>
+      <AnchorPane layoutX="56.0" layoutY="16.0" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+         <children>
+            <Separator layoutX="386.0" layoutY="16.0" orientation="VERTICAL" prefHeight="672.0" prefWidth="20.0" />
+            <Label layoutX="454.0" layoutY="25.0" text="Welcome back  ">
+               <font>
+                  <Font name="System Bold Italic" size="50.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#050a54" />
+                        <Stop color="#c99c9c" offset="0.9961685823754789" />
+                        <Stop color="#c99c9c" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <TextField fx:id="lblUserName" layoutX="542.0" layoutY="263.0" prefHeight="41.0" prefWidth="308.0" promptText="user name" style="-fx-background-radius: 10;" />
+            <PasswordField fx:id="lblPassword" layoutX="542.0" layoutY="331.0" onKeyReleased="#txtPasswordOnKeyReleased" prefHeight="41.0" prefWidth="308.0" promptText="password" style="-fx-background-radius: 10;" />
+            <JFXButton fx:id="btnLogin" layoutX="542.0" layoutY="440.0" onAction="#btnLoginOnAction" prefHeight="41.0" prefWidth="308.0" style="-fx-background-color: #4649FF; -fx-background-radius: 10;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="522.0" layoutY="121.0" prefHeight="26.0" prefWidth="343.0" text="Already have an account?">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Separator layoutX="542.0" layoutY="566.0" prefHeight="12.0" prefWidth="308.0" />
+            <Hyperlink layoutX="721.0" layoutY="408.0" text="Forgot password ?" />
+            <Label layoutX="542.0" layoutY="603.0" prefHeight="16.0" prefWidth="189.0" text="Or register as a user" />
+            <JFXButton fx:id="btnRegister" layoutX="762.0" layoutY="624.0" onAction="#btnRegisterOnAction" prefHeight="41.0" prefWidth="108.0" style="-fx-background-color: #B0DAFF; -fx-background-radius: 10;" text="Sign up" textFill="#5651f5">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <Separator layoutX="562.0" layoutY="160.0" prefHeight="12.0" prefWidth="308.0" />
+            <Label layoutX="488.0" layoutY="199.0" prefHeight="26.0" prefWidth="108.0" text="Login">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="rBtnShowPassword" layoutX="532.0" layoutY="379.0" mnemonicParsing="false" onMouseClicked="#rBtnOnMouseClicked" text="show password" />
+            <Label fx:id="txtPassword" layoutX="687.0" layoutY="374.0" prefHeight="31.0" prefWidth="176.0">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="650.0" fitWidth="300.0" layoutX="54.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/login.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

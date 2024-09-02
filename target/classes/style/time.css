@@ -1,0 +1,4 @@
+.backgroundColor {
+    -fx-label-padding: 0;
+    -fx-background-color: linear-gradient(to top,black,gray);
+}
